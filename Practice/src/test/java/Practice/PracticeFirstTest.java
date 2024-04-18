@@ -15,10 +15,9 @@ public class PracticeFirstTest {
 
 	@BeforeSuite
 	public void openbrowser() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\ecworkspace\\Practice\\src\\java\\resources\\chromedriver\\chromedriver.exe");
+	
 		ChromeOptions options = new ChromeOptions();
-		options.setHeadless(true);
+	;
 		// options.addArguments("--start-maximized");
 		// options.addArguments("--disable-features=VizDisplayCompositor");
 
