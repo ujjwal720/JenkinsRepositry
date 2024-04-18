@@ -27,9 +27,12 @@ public class PracticeFirstTest {
 
 	@Test(priority = 1)
 	public void navigateToGoogle() {
-		driver.get("https://www.google.com/");
-		if (driver.getTitle().equalsIgnoreCase("google")) {
+		driver.get("https://automationexercise.com/");
+		String url=driver.getCurrentUrl();
+		if (url.equals("https://automationexercise.com/")) {
 			System.out.println("Test is running in headless mode");
+			System.out.println("The url is correct");
+			System.out.println(driver.getCurrentUrl());
 		}
 
 		else {
@@ -41,11 +44,22 @@ public class PracticeFirstTest {
 
 	@Test(priority = 2)
 	public void keystobesend() {
+		String url=driver.getCurrentUrl();
 		try {
-			driver.findElement(By.xpath("//textarea[@class='gLFyf']")).sendKeys("India");
-			Assert.assertEquals(driver.getTitle(), "Goggle");
+			if (url.equals("https://automationexercise.comrrrr/")) {
+				//System.out.println("Test is running in headless mode");
+				System.out.println("The url is correct");
+				
+			}
 
-		} catch (Exception e) {
+			else {
+				Assert.assertEquals("lom", "poi");
+				System.out.println("test is fine with headless mode");
+			}
+			// Add additional test steps here
+		
+
+			} catch (Exception e) {
 			
 			System.out.println(e.getMessage());
 
