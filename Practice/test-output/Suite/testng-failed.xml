@@ -5,6 +5,7 @@
     <classes>
       <class name="Practice.PracticeFirstTest">
         <methods>
+          <include name="statusupdate"/>
           <include name="keystobesend"/>
           <include name="openbrowser"/>
         </methods>
